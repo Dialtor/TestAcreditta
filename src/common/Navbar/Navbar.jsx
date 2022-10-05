@@ -82,6 +82,10 @@ const NavContainer = styled.nav`
         font-size: 1.4rem;
         color: white;
         display: inline;
+        transition: 0.2s all ease;
+      }
+      a:hover {
+        color: #11998e;
       }
       display: block;
     }
