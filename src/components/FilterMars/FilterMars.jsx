@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/FilterMars.module.css';
 
-const FilterMars = ({ setSearchInput }) => {
+const FilterMars = ({ setSearchInput,setDateInput }) => {
 	return (
 		<div className={styles.filtermars}>
 			<div className={`${styles.form__group} ${styles.field}`}>
@@ -9,7 +9,7 @@ const FilterMars = ({ setSearchInput }) => {
 				<label htmlFor="name" className={styles.form__label}>Search Rover or Camera</label>
 			</div>
 
-			<input type="date" name="" id="" />
+			<input type="date" name="" onChange={(e) => setDateInput(e.target.value)} />
 
 		</div >
 	)

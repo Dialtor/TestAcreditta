@@ -41,7 +41,7 @@
 }
 
 .card_item:hover > .card_info {
-  height: 170px;
+  height: 200px;
   bottom: -10px;
   backdrop-filter: blur(2px);
 }
@@ -63,4 +63,22 @@
 .card_info span {
   margin-top: 2px;
   color: white;
+}
+
+.pagination_container {
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(48, 44, 44, 0.492);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagination_container span {
+  color: white;
+  width: 30px;
+
 }
