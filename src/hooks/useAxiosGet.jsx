@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export const useAxiosGet = (url) => {
     const [response, setResponse] = useState([]);
-    const [error, setError] = useState('');
+    const [error, setError] = useState(false);
     const [loading, setloading] = useState(true);
 
     const fetchData = () => {
@@ -13,7 +13,7 @@ export const useAxiosGet = (url) => {
                 setResponse(res.data);
             })
             .catch((err) => {
-                setError(err);
+                setError(true);
             })
             .finally(() => {
                 setloading(false);
