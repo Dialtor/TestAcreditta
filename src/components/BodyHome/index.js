@@ -1,0 +1,1 @@
+export { default as BodyHome } from './BodyHome';
