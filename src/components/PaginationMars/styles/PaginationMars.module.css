@@ -12,12 +12,14 @@
   align-items: center;
   gap: 50px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .pagination_container span {
   color: white;
   background-color: #11998e;
   width: 40px;
+  min-width: 30px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -39,4 +41,17 @@
 
 .pagination_container span:active {
   transform: scale(1.2);
+}
+
+@media screen and (max-width:920px) {
+  .pagination_container {
+    paint-order: -2;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width:410px) {
+  .pagination_container {
+    gap: 10px;
+  }
 }
