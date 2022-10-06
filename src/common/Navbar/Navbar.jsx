@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Link, NavLink, Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { BurguerButton } from '../BurguerButton';
+import nasalogo from '../../assets/nasalogo.png'
 
 const Navbar = () => {
 
 	const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-    //cuando esta true lo pasa a false y vice versa
     setClicked(!clicked)
   }
 
@@ -15,7 +15,8 @@ const Navbar = () => {
   return (
     <>
       <NavContainer>
-        <h2>Test <span>Acreditta</span></h2>
+      {/* <h2>Test <span>Acreditta</span></h2> */}
+        <img src={nasalogo} width="70px" alt="nasalogo" />
         <div className={`links ${clicked ? 'active' : ''}`}>
 
           <Link onClick={()=> {clicked ? handleClick() : null}} to="/" >Inicio</Link>
@@ -54,7 +55,11 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 2;
+  img {
+    margin-left: 6px;
+    cursor: pointer;
+  }
   a{
     color: white;
     text-decoration: none;

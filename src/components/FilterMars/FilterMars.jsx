@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { useAxiosGet } from '../../hooks';
 import styles from './styles/FilterMars.module.css';
 
-const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover }) => {
+const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover, setCurrentRange, currentRange }) => {
 	
 	const [maxRange, setMaxRange] = useState(0);
-	const [roverInfo, setRoverInfo] = useState([])
+
 	const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/?&api_key=syf4L9a9xiL3YQx0snEdMrRMDP8e2oGiCZoH7a2f`);
 
 
@@ -18,10 +18,17 @@ const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover
 	
 
   const handleChange = (e) => {
-    setCurrentRover(e.target.value)
-		setRoverInfo()
-		console.log(" Selected!!", currentRover);
+    setCurrentRover(e.target.value);
+		response.rovers && response.rovers.forEach(element => {
+				if (e.target.value === element.name) {
+						setMaxRange(element.max_sol)
+				}
+		});
   }
+
+
+	console.log('max sol', maxRange )
+	console.log(" Selected!!", currentRover);
 
 	return (
 		<div className={styles.filtermars}>
@@ -42,9 +49,10 @@ const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover
 				</select>
 				<i></i>
 			</div>
-			
 
-	
+			<label htmlFor="" className={styles.label_sol}>Sol: {currentRange}</label>
+			<input type="range" min={0} max={2000} onChange={(e) => setCurrentRange(e.target.value) } />
+			
 
 		</div >
 	)
