@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 
-export const useAxiosGet = (url, data, data2) => {
+export const useAxiosGetParam = (url, data) => {
     const [response, setResponse] = useState([]);
     const [error, setError] = useState(false);
     const [loading, setloading] = useState(true);
@@ -22,11 +22,7 @@ export const useAxiosGet = (url, data, data2) => {
 
     useEffect(() => {
         fetchData();
-    }, []);
-
-    useEffect(() => {
-        fetchData();
-    }, [data, data2]);
+    }, [data]);
 
     // custom hook returns value
     return [response, error, loading];

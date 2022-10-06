@@ -1,0 +1,137 @@
+.filtermars{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(48, 44, 44, 0.492);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 100px auto 0px auto;
+    border-radius: 12px;
+}
+
+.form__group {
+  position: relative;
+  padding: 8px 0 0;
+  width: 360px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 400;
+  border-width: 1px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+input[type=date] {
+  padding: 10px 0 0;
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #b7b3b3a4;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
+  outline: none;
+  border: 0;
+
+  padding: 0 3px;
+  color: #fff;
+  cursor: pointer;
+}
+input[type=date]::-webkit-datetime-edit-month-field {
+  color: red;
+}
+input[type=date]::-webkit-datetime-edit-day-field {
+  color: white;
+}
+input[type=date]::-webkit-datetime-edit-year-field {
+  color: blue;
+}
+input[type=date]::-webkit-clear-button {
+  font-size: 18px;
+  height: 30px;
+  position: relative;
+  right: 5px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+input[type=date]::-webkit-inner-spin-button {
+  height: 30px;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+  font-size: 18px;
+}
+input[type=date]::-webkit-calendar-picker-indicator:hover {
+  background-color: #959595;
+  color: #e6e6e6;
+  cursor: pointer;
+}
+input[type=date]::-webkit-calendar-picker-indicator:active {
+  color: blue;
+}
+
+.content_selec select {
+  background-color: #b7b3b3a4;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
+  height: 40px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+
+
