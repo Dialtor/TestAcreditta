@@ -1,0 +1,28 @@
+.filterasteroids{
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(48, 44, 44, 0.492);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 100px auto 0px auto;
+  border-radius: 12px;
+}
+
+.flex_asteroids_data {
+  /* background-color: red; */
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex_asteroids_data span {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
