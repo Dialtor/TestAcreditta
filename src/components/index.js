@@ -1,3 +1,4 @@
+export * from './BodyAsteroids';
 export * from './BodyHome';
 export * from './BodyMars';
 export * from './FilterMars';

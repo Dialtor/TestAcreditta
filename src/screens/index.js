@@ -1,2 +1,3 @@
-export { default as Home } from './Home/Home';
-export { default as MarsRover } from './MarsRover/MarsRover';
+export * from './Asteroids';
+export * from './Home';
+export * from './MarsRover';
