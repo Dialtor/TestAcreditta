@@ -1,0 +1,45 @@
+.bodyasteroids{
+  width: 90%;
+  height: auto;
+  min-height: 400px;
+  padding: 10px;
+  background-color: rgba(48, 44, 44, 0.113);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  row-gap: 30px;
+  margin: 10px auto 20px auto;
+  border-radius: 12px;
+}
+
+.flexAsteoird{
+  width: 45%;
+  height: auto;
+  min-height: 400px;
+  padding: 10px;
+  background-color: #365c59dd;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 12px;
+}
+
+.card_item_asteroids {
+  width: 250px;
+  min-width: 200px;
+  height: 200px;
+  background-color: rgba(253, 252, 249, 0.524);
+  box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
+  border-radius: 12px;
+  transition: 0.2s all ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+

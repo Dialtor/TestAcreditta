@@ -3,7 +3,7 @@ import { useAxiosGet } from '../../hooks';
 import styles from './styles/BodyHome.module.css';
 
 const BodyHome = () => {
-const [response, error, loading] = useAxiosGet('https://api.nasa.gov/planetary/apod?api_key=M45Rh6pSttKQAKxH0vwgSZdpwrBKFyzZf4d2Nu7z')
+const [response, error, loading] = useAxiosGet('https://api.nasa.gov/planetary/apod?api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP')
 
 	return (
 		<div className={styles.bodyhome}>

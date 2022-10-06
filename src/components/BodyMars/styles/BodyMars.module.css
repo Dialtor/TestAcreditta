@@ -29,7 +29,6 @@
   transition: 0.2s all ease;
   position: relative;
   overflow: hidden;
-
 }
 
 .card_item:hover {
@@ -64,5 +63,13 @@
 .card_info span {
   margin-top: 2px;
   color: white;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 420px) {
+  .card_item:hover {
+    transform: scale(1.2);
+    z-index: 1;
+  }
 }
 

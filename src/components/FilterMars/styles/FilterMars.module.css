@@ -134,4 +134,9 @@ input[type=date]::-webkit-calendar-picker-indicator:active {
   border: none;
 }
 
+.label_sol {
+  color: white; 
+  font-size: 18px;
+}
+
 

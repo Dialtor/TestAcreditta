@@ -13,9 +13,8 @@ const BodyMars = () => {
 	const [searchInput, setSearchInput] = useState("");
 	const [dateInput, setDateInput] = useState("");
 	const [currentRover, setCurrentRover] = useState("curiosity");
-	const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=1000&page=${currentPage}&api_key=syf4L9a9xiL3YQx0snEdMrRMDP8e2oGiCZoH7a2f`, currentPage, currentRover);
-
-
+	const [currentRange, setCurrentRange] = useState(0);
+	const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=${currentRange}&page=${currentPage}&api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP`, currentPage, currentRover, currentRange);
 
 	return (
 		<>
@@ -25,6 +24,8 @@ const BodyMars = () => {
 				setDateInput={setDateInput}
 				setCurrentRover={setCurrentRover}
 				currentRover={currentRover}
+				setCurrentRange={setCurrentRange}
+				currentRange={currentRange}
 
 			/>
 			<div className={styles.bodymars}>
