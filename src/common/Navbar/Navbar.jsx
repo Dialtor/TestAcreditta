@@ -21,7 +21,7 @@ const Navbar = () => {
 
           <Link onClick={()=> {clicked ? handleClick() : null}} to="/" >Inicio</Link>
           <Link onClick={()=> {clicked ? handleClick() : null}} to="/marsrover" >Mars Rover</Link>
-          <Link onClick={()=> {clicked ? handleClick() : null}} to="/wer" >Orbiting Elements </Link>
+          <Link onClick={()=> {clicked ? handleClick() : null}} to="/tle" >Orbiting Elements </Link>
           <Link onClick={()=> {clicked ? handleClick() : null}} to="/asteroids" >Asteroids NeoWs</Link>
         </div>
         <div className='burguer'>

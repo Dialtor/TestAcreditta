@@ -51,7 +51,7 @@ const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover
 			</div>
 
 			<label htmlFor="" className={styles.label_sol}>Sol: {currentRange}</label>
-			<input type="range" min={0} max={2000} onChange={(e) => setCurrentRange(e.target.value) } />
+			<input type="range" min={0} max={maxRange} onChange={(e) => setCurrentRange(e.target.value) } />
 			
 
 		</div >

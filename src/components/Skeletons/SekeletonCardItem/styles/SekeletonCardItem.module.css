@@ -3,6 +3,7 @@
   min-width: 200px;
   height: 200px;
   background-color: rgba(124, 122, 113, 0.524);
+  box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
   border-radius: 12px;
   transition: 0.2s all ease;
   position: relative;

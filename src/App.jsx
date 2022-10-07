@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import { Asteroids, Home, MarsRover } from "./screens"
+import { Asteroids, Home, MarsRover, Tle } from "./screens"
 
 
 
@@ -16,6 +16,9 @@ function App() {
         </Route>
         <Route path="/asteroids">
           <Asteroids/>
+        </Route>
+        <Route path="/tle">
+          <Tle/>
         </Route>
       </Switch>
   
