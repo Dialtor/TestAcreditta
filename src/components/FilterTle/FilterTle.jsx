@@ -5,11 +5,11 @@ import styles from './styles/FilterTle.module.css';
 
 const FilterTle = ({setIdSalite, setNameSatelite, setDate, response, error, loading, setLine2, setLine1}) => {
 
-// console.log(response["member"], error, loading)
+
 const data = response["member"]
 const DataMember = data && data;
 
-// console.log("DataMember", DataMember)
+
 	return (
 		<div className={styles.filtertle}>
 							{
