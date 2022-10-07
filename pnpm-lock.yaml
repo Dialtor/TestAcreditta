@@ -10,6 +10,7 @@ specifiers:
   react-lazy-load-image-component: ^1.5.5
   react-router-dom: 5.2.0
   styled-components: ^5.3.6
+  tle.js: ^4.7.2
   vite: ^3.1.0
 
 dependencies:
@@ -19,6 +20,7 @@ dependencies:
   react-lazy-load-image-component: 1.5.5_biqbaboplfbrettd7655fr4n2y
   react-router-dom: 5.2.0_react@18.2.0
   styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
+  tle.js: 4.7.2
 
 devDependencies:
   '@types/react': 18.0.21
@@ -1075,6 +1077,10 @@ packages:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
     dev: true
 
+  /satellite.js/4.1.4:
+    resolution: {integrity: sha512-OGUrs1GoGKjy9FYbW2ZaM5slaPfJaYrcxjE3YQTeR/OGyFPCxb6HK22Chao55POU06pdmNAdW5rtKJURse0+XA==}
+    dev: false
+
   /scheduler/0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
@@ -1139,6 +1145,13 @@ packages:
 
   /tiny-warning/1.0.3:
     resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
+    dev: false
+
+  /tle.js/4.7.2:
+    resolution: {integrity: sha512-Ucbz7YsIkhymgH/K6mQ5nCldF6Zim4IPiOKwIzEb5PkyWyi2dDH8sbzJdyU++vZhMp+CN+kSQs/NUASJafgMQw==}
+    engines: {node: '>=12'}
+    dependencies:
+      satellite.js: 4.1.4
     dev: false
 
   /to-fast-properties/2.0.0:
