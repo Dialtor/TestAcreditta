@@ -1,21 +1,35 @@
 import React from 'react';
 import styles from './styles/BodyMars.module.css';
-import { useAxiosGet, useAxiosGetParam } from '../../hooks';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { SekeletonCardItem } from '../Skeletons/SekeletonCardItem';
 import FilterMars from '../FilterMars/FilterMars';
 import { useState } from 'react';
 import { PaginationMars } from '../PaginationMars';
+import {useDispatch, useSelector} from 'react-redux'
+import { getMarsAsync } from '../../features/mars/marsSlice';
+import { useEffect } from 'react';
 
 
 const BodyMars = () => {
+
+
 	const [currentPage, setCurrentPage] = useState(1);
 	const [searchInput, setSearchInput] = useState("");
 	const [dateInput, setDateInput] = useState("");
 	const [currentRover, setCurrentRover] = useState("curiosity");
 	const [currentRange, setCurrentRange] = useState(0);
-	const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=${currentRange}&page=${currentPage}&api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP`, currentPage, currentRover, currentRange);
+	// const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=${currentRange}&page=${currentPage}&api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP`, currentPage, currentRover, currentRange);
+	const dispatch = useDispatch();
+	const masrsInfo = useSelector(state => state.mars.data);
+	const loading = useSelector(state => state.mars.loading)
 
+
+	useEffect(() => {
+
+			dispatch(getMarsAsync(currentRover,currentRange, currentPage));
+
+	}, [currentRover,currentRange, currentPage])
+	
 	return (
 		<>
 			<section className={styles.mars_container}>
@@ -42,7 +56,7 @@ const BodyMars = () => {
 				}
 				{
 
-					response.photos && response.photos.map(data => {
+masrsInfo[0] && masrsInfo[0].photos.map(data => {
 
 						if (data.camera.full_name.toLowerCase().includes(searchInput.trim().toLowerCase())
 							|| data.camera.name.toLowerCase().includes(searchInput.trim().toLowerCase())

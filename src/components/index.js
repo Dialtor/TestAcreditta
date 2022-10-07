@@ -9,4 +9,3 @@ export * from './PaginationMars';
 export * from './Skeletons/SekeletonCardItem';
 export * from './Skeletons/SkeletonButtonSatelites';
 export * from './Skeletons/SkeletonCardAsteroid';
-export * from './datamars';

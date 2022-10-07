@@ -19,8 +19,8 @@ const BodyOrbiting = () => {
 ${line1 && line1}
 ${line2 && line2}`;
 
-const latLonObj = getLatLngObj(tle);
-console.log(latLonObj)
+const latLonObj = getLatLngObj(tle && tle, date);
+
 
 	return (
 		<>

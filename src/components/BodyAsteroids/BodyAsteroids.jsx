@@ -28,7 +28,7 @@ const BodyAsteroids = () => {
 						DataStartDate && DataStartDate.map(item => {
 
 							return (
-								<div className={styles.card_item_asteroids}>
+								<div key={item.neo_reference_id} className={styles.card_item_asteroids}>
 										<span><strong>Asteroid Name:</strong> {item.name}</span>
 									<span><strong>Neo Reference:</strong> {item.neo_reference_id}</span>
 									<span><strong>Estimated Diameter {"(km)"}:</strong> {item.estimated_diameter.kilometers.estimated_diameter_max} Km</span>
@@ -50,7 +50,7 @@ const BodyAsteroids = () => {
 						DataEndDate && DataEndDate.map(item => {
 
 							return (
-								<div className={styles.card_item_asteroids}>
+								<div key={item.neo_reference_id} className={styles.card_item_asteroids}>
 									<span><strong>Asteroid Name:</strong> {item.name}</span>
 									<span><strong>Neo Reference:</strong> {item.neo_reference_id}</span>
 									<span><strong>Estimated Diameter {"(km)"}:</strong> {item.estimated_diameter.kilometers.estimated_diameter_max} Km</span>
