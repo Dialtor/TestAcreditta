@@ -12,13 +12,10 @@ import { useEffect } from 'react';
 
 const BodyMars = () => {
 
-
-	// const [currentPage, setCurrentPage] = useState(1);
 	const [searchInput, setSearchInput] = useState("");
 	const [dateInput, setDateInput] = useState("");
 	const [currentRover, setCurrentRover] = useState("curiosity");
 	const [currentRange, setCurrentRange] = useState(0);
-	// const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=${currentRange}&page=${currentPage}&api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP`, currentPage, currentRover, currentRange);
 	const dispatch = useDispatch();
 	const masrsInfo = useSelector(state => state.mars.data);
 	const loading = useSelector(state => state.mars.loading);

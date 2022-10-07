@@ -3,7 +3,7 @@ import styles from './styles/PaginationMars.module.css';
 import {useDispatch, useSelector} from 'react-redux'
 import { ChangeCurrentPage } from '../../features/mars/marsSlice';
 
-const PaginationMars = ({currentPage, setCurrentPage}) => {
+const PaginationMars = ({currentPage}) => {
 
 	const dispatch = useDispatch();
 
