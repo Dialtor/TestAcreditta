@@ -6,15 +6,16 @@ import { getLocalStorage, setLocalStorage } from '../../utilities/localstorage.u
 const initialState = {
     data: [],
     error: false,
-    loading: true
+    loading: true,
+    currentPage: 1,
 }
 
 export const marsSlice = createSlice({
   name: 'mars',
-  initialState: getLocalStorage('DATA_MARS') ? JSON.parse(getLocalStorage('DATA_MARS')) : initialState,
+  initialState:  initialState,
   reducers: {
     getDataMars: (state, action) => {
-      setLocalStorage('DATA_MARS', state);
+      
       state.data = [action.payload]
     },
     getLoadingMars: (state, action) => {
@@ -22,6 +23,9 @@ export const marsSlice = createSlice({
     },
     getErrorMars: (state, action) => {
       state.error = action.payload
+    },
+    getCurrentPageMars: (state, action) => {
+      state.currentPage = action.payload
     }
   }
 });
@@ -49,5 +53,9 @@ export const getMarsAsync = (currentRover, currentRange, currentPage) =>  (dispa
   
 };
 
-export const { getDataMars, getErrorMars, getLoadingMars } = marsSlice.actions;
+export const ChangeCurrentPage = (currentPage, value)  => (dispatch) => {
+    dispatch(getCurrentPageMars(currentPage + (value)))
+}
+
+export const { getDataMars, getErrorMars, getLoadingMars, getCurrentPageMars } = marsSlice.actions;
 export default marsSlice.reducer

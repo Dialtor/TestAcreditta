@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 const BodyMars = () => {
 
 
-	const [currentPage, setCurrentPage] = useState(1);
+	// const [currentPage, setCurrentPage] = useState(1);
 	const [searchInput, setSearchInput] = useState("");
 	const [dateInput, setDateInput] = useState("");
 	const [currentRover, setCurrentRover] = useState("curiosity");
@@ -21,7 +21,8 @@ const BodyMars = () => {
 	// const [response, error, loading] = useAxiosGet(`https://api.nasa.gov/mars-photos/api/v1/rovers/${currentRover}/photos?sol=${currentRange}&page=${currentPage}&api_key=aDxJVCfpMO3rARGrOdBGOKuvXJ2NlqTXweeYZutP`, currentPage, currentRover, currentRange);
 	const dispatch = useDispatch();
 	const masrsInfo = useSelector(state => state.mars.data);
-	const loading = useSelector(state => state.mars.loading)
+	const loading = useSelector(state => state.mars.loading);
+	const currentPage = useSelector(state => state.mars.currentPage);
 
 
 	useEffect(() => {
@@ -93,7 +94,7 @@ masrsInfo[0] && masrsInfo[0].photos.map(data => {
 			</div >
 
 
-			<PaginationMars currentPage={currentPage} setCurrentPage={setCurrentPage} />
+			<PaginationMars currentPage={currentPage}  />
 			</section>
 
 		</>
