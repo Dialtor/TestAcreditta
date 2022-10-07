@@ -3,14 +3,13 @@ import { useAxiosGet } from '../../hooks';
 import { SkeletonButtonSatelites } from '../Skeletons/SkeletonButtonSatelites';
 import styles from './styles/FilterTle.module.css';
 
-const FilterTle = () => {
-	const [response, error, loading] = useAxiosGet(`https://tle.ivanstanojevic.me/api/tle/`);
-	
-console.log(response["member"], error, loading)
+const FilterTle = ({setIdSalite, setNameSatelite, setDate, response, error, loading, setLine2, setLine1}) => {
+
+// console.log(response["member"], error, loading)
 const data = response["member"]
 const DataMember = data && data;
 
-console.log("DataMember", DataMember)
+// console.log("DataMember", DataMember)
 	return (
 		<div className={styles.filtertle}>
 							{
@@ -20,8 +19,9 @@ console.log("DataMember", DataMember)
 				}
 			{
 				DataMember && DataMember.map(item => (
-					<div key={item.id} className={styles.satelite_item}>
+					<div key={item.satelliteId} className={styles.satelite_item} onClick={() => [setNameSatelite(item.name), setIdSalite(item.satelliteId), setDate(item.date), setLine1(item.line1), setLine2(item.line2)]}>
 						<span>{item.name}</span>
+
 					</div>
 				))
 			}

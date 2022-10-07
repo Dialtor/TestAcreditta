@@ -7,10 +7,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   row-gap: 30px;
   margin: 10px auto 20px auto;
   border-radius: 12px;
 }
+
+.info_satelite_container h1 {
+  color: white;
+}
+
+.info_satelite_container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_satelite_container div span {
+  color: white;
+}
+
 
