@@ -36,9 +36,11 @@ const latLonObj = getLatLngObj(tle && tle, date);
 			/>
 
 			<div className={styles.bodyorbiting}>
+			{loading && <h1 className={styles.info_satelite_container_loading}>This information may take a moment to display due to detailed satellite information.</h1>}
 			{
 				!loading && new Array(1).fill().map((item, index) => (
 					<div key={index} className={styles.info_satelite_container}>
+					
 					<h1>Satelite {nameSatelite}</h1>
 					<div>
 						<span><strong>ID Saltelite Reference:</strong> {idSatelite}</span>

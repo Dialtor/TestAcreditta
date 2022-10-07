@@ -20,6 +20,13 @@
   margin: 20px 0;
 }
 
+.info_satelite_container_loading {
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 40px;
+}
+
 .info_satelite_container div {
   min-height: 300px;
   display: flex;
