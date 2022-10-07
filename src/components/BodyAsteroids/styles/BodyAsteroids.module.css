@@ -8,14 +8,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
-  row-gap: 30px;
+  gap: 20px;
+  row-gap: 10px;
   margin: 10px auto 20px auto;
   border-radius: 12px;
 }
 
 .flexAsteoird{
   width: 45%;
+  min-width: 200px;
   height: auto;
   min-height: 400px;
   padding: 10px;
@@ -30,16 +31,53 @@
 }
 
 .card_item_asteroids {
-  width: 250px;
+  width: 80%;
   min-width: 200px;
-  height: 200px;
+  height: auto;
   background-color: rgba(253, 252, 249, 0.524);
   box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
   border-radius: 12px;
   transition: 0.2s all ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
 }
 
+.card_item_asteroids span {
+  margin-left: 10px;
+}
+
+.danger_span {
+  border-radius: 12px;
+  padding: 6px;
+  font-weight: 700;
+  background-color: rgb(174, 39, 18);
+  color: white;
+}
+
+
+.sucess_span {
+  border-radius: 12px;
+  padding: 6px;
+  font-weight: 700;
+  background-color: rgb(96, 174, 18);
+  color: white;
+}
+
+
+@media screen and (max-width: 667px) {
+
+  .flexAsteoird {
+    width: 90%;
+  }
+  .card_item_asteroids {
+    width: 90%;
+    padding: 10px;
+
+  }
+}
 
 

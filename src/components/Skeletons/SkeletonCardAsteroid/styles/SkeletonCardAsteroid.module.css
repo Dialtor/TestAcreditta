@@ -1,0 +1,28 @@
+.skeletoncardasteroid{
+    width: 80%;
+    min-width: 200px;
+    height: 150px;
+    background-color: rgba(124, 122, 113, 0.524);
+    box-shadow: 0px 4px 8px rgba(30, 30, 29, 0.16);
+    border-radius: 12px;
+    transition: 0.2s all ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    animation: opacitychange 2s ease-in-out 0.66s infinite;
+}
+
+@keyframes opacitychange {
+  0%,
+  100% {
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  60% {
+      background-color: #0878a817;
+  }
+
+}
