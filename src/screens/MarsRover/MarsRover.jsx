@@ -4,7 +4,7 @@ import { BodyMars } from '../../components';
 
 const MarsRover = () => {
 
-	console.log("mars")
+
 	return (
 		<>
 			<Navbar/>

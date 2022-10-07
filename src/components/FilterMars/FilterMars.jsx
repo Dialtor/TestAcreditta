@@ -13,7 +13,7 @@ const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover
 
 	useEffect(() => {
 		let range = response.rovers && response.rovers.filter(item => item.name === currentRover)
-		console.log("current Object", range)
+
 	}, [])
 	
 
@@ -27,8 +27,6 @@ const FilterMars = ({ setSearchInput, setDateInput, setCurrentRover,currentRover
   }
 
 
-	console.log('max sol', maxRange )
-	console.log(" Selected!!", currentRover);
 
 	return (
 		<div className={styles.filtermars}>
