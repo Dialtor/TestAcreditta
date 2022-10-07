@@ -1,0 +1,21 @@
+ .satelite_item {
+  width: 50px;
+  height: 20px;
+  background-color: rgba(124, 122, 113, 0.524);
+  padding: 14px;
+ 
+  border-radius: 12px;
+  animation: opacitychange 2s ease-in-out 0.66s infinite;
+}
+
+@keyframes opacitychange {
+  0%,
+  100% {
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  60% {
+      background-color: #0878a817;
+  }
+
+}

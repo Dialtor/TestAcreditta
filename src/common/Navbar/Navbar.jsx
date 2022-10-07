@@ -129,6 +129,7 @@ const NavContainer = styled.nav`
 
 const BgDiv = styled.div`
   background-color: #221a1ac6;
+
   position: absolute;
   top: -1000px;
   left: -1000px;
@@ -137,7 +138,7 @@ const BgDiv = styled.div`
   z-index: 1;
   transition: all .6s ease ;
   &.active{
-
+    backdrop-filter: blur(18px);
     border-radius: 0 0 80% 0;
     top: 0;
     left: 0;
