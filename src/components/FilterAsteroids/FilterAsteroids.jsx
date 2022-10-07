@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './styles/FilterAsteroids.module.css';
 
 const FilterAsteroids = ({setStartDate, setEndDate,startDate, endDate}) => {
+
+
+
 	return (
 		<div className={styles.filterasteroids}>
 			<div className={styles.flex_asteroids_data}>
@@ -10,7 +13,7 @@ const FilterAsteroids = ({setStartDate, setEndDate,startDate, endDate}) => {
 			</div>
 			<div className={styles.flex_asteroids_data}>
 			<span>End Date</span>
-			<input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+			<input type="date" value={endDate}  onChange={(e) => setEndDate(e.target.value)} />
 			</div>
 		</div >
 	)
