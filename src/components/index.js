@@ -5,4 +5,5 @@ export * from './FilterAsteroids';
 export * from './FilterMars';
 export * from './PaginationMars';
 export * from './Skeletons/SekeletonCardItem';
+export * from './Skeletons/SkeletonCardAsteroid';
 export * from './datamars';
