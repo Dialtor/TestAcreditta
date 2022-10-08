@@ -7,7 +7,7 @@
 
 ## 2. How To Start the Project
 
-1.  Download the repository [test-acreditta](https://github.com/Dialtor/TestItGlobers)
+1.  Download the repository [test-acreditta](https://github.com/Dialtor/TestAcreditta)
 2.  Change directory with in the project folder
 3.  **`npm install`** (For installing all of the **Front-end** dependencies)
 
