@@ -12,7 +12,7 @@
 3.  **`npm install`** (For installing all of the **Front-end** dependencies)
 
 4.  For starting the entire application (Open two console's tabs for each command):
-    **`npm run start`**
+    **`npm run dev`**
 
 ## 3. How To build
 
